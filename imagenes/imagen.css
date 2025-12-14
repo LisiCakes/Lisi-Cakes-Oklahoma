@@ -1,14 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--blanco);
 }
 
 :root {
@@ -20,116 +17,128 @@ body {
     --gris: #666;
 }
 
+body {
+    background: var(--blanco);
+    color: #333;
+}
+
+/* ================= BARRA SUPERIOR ================= */
 .barra {
     position: sticky;
     top: 0;
+    background: var(--rosa);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
     z-index: 1000;
-    height: 100px;
-    background-color: var(--rosa);
-}
-
-
-.Menu-Inicio {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    left: 75rem;
-    top: -8px;
-    background-color: var(--blanco);
-    border-radius: 20px;
-}
-
-.barra .Menu-Inicio:hover {
-    transform: scale(1.6);
-    box-shadow: 0 0 10px rgb(95, 91, 91);
 }
 
 .icono {
-    position: relative;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    align-items: center;
-    top: 13px;
-    left: 10px;
-    box-shadow: 0 0 10px rgb(95, 91, 91);
-
-    
 }
 
-/* ==== LOGO ==== */
+.Menu-Inicio {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--blanco);
+    padding: 6px;
+    transition: transform 0.3s;
+}
+
+.Menu-Inicio:hover {
+    transform: scale(1.2);
+}
+
+/* ================= CABECERA ================= */
+.header-galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 10px;
+}
+
 .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #f8b4d9;
     animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% {
-    transform: translateY(0);
-    }
-    50% {
-    transform: translateY(-8px);
-    }
-}
-
-.logo {
-    position: relative;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    left: 585px;
-    top: 100px;
-    margin: 10px;
-    box-shadow: 0 0 15px #f8b4d9;
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
 .titulo {
-    position: relative;
-    font-size: 40px;
-    top: 130px;
-    color: whitesmoke;
-    font-family: sans-serif;
-    width: 180px;
-    height: 60px;
-    text-align: center;
-    background-color: var(--rosa-fuerte);
-    left: 580px;
-    padding-top: 10px;
+    margin-top: 15px;
+    background: var(--rosa-fuerte);
+    color: #fff;
+    padding: 10px 30px;
     border-radius: 20px;
-    box-shadow: 0 0 20px #f8b4d9;
+    font-size: 1.6rem;
 }
 
+/* ================= GALERÍA ================= */
 .galeria {
-    position: relative;
-    top: 240px;
-    margin: 0;
-    background-color: var(--crema);
-    height: 800px;
-    overflow: hidden;
-    box-shadow: 0 0 20px var(--crema)
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--crema);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
-.img-1 { 
-    position: relative;
-    width: 210px;
-    height: 280px;
-    top: 80px;
-    left: 80px;
-    margin: 10px;
-    border-radius: 20px;
+.galeria img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 18px;
     box-shadow: 0 0 15px #f8b4d9;
-    transition: 1s ease;
+    transition: transform 0.3s ease;
 }
 
-.img-1:hover {
-    transform: scale(1.2);
+.galeria img:hover {
+    transform: scale(1.05);
 }
 
+/* ================= FOOTER ================= */
 footer {
-    position: relative;
-    background-color: var(--rosa-fuerte);
-    color: var(--blanco);
+    background: var(--rosa-fuerte);
+    color: #fff;
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
-    bottom: -400px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+
+    .barra {
+        height: 70px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .titulo {
+        font-size: 1.3rem;
+    }
+
+    .galeria {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .galeria img {
+        height: 200px;
+    }
 }
