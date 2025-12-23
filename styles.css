@@ -158,23 +158,6 @@ body {
     border-radius: 12px;
 }
 
-/* ================= PRECIOS ================= */
-.price-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-}
-
-.price-card {
-    background: #fff;
-    padding: 16px;
-    border-radius: 12px;
-}
-
-.price {
-    color: var(--rosa-fuerte);
-    font-size: 1.5rem;
-}
 
 /* ================= CONTACTO ================= */
 
@@ -209,6 +192,62 @@ body {
     padding: 12px 20px;
     border-radius: 20px;
     text-decoration: none;
+}
+
+/*================Feedback=============*/
+
+.feedback-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: gold;
+}
+
+.feedback-list {
+    margin-top: 30px;
+}
+
+.feedback-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.feedback-item .rating {
+    color: gold;
+    font-size: 18px;
 }
 
 /* ================= FOOTER ================= */
