@@ -108,6 +108,10 @@ body {
     padding: 40px 20px;
 }
 
+.container h2 {
+    text-align: center;
+}
+
 /* ================= PRODUCTOS ================= */
 .productos {
     text-align: center;
