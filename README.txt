@@ -1,4 +1,4 @@
-Lisi Cakes - plantilla completa
+Lisi Cakes
 Archivos incluidos:
 - index.html
 - styles.css
