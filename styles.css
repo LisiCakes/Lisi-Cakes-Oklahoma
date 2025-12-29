@@ -195,6 +195,9 @@ body {
 }
 
 /*================Feedback=============*/
+.testimonios {
+    text-align: center;
+}
 
 .feedback-form {
     max-width: 500px;
